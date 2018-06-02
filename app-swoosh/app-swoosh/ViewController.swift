@@ -9,10 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var swoosh: UIImageView!
+    @IBOutlet weak var bgImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Se calculara la posición de la imagen swoosh (el logo)
+        swoosh.frame = CGRect(x: view.frame.size.width / 2 - swoosh.frame.size.width / 2, y: 50, width: swoosh.frame.size.width, height: swoosh.frame.size.height)
+        
+        //se redimensiona la imagen bgImg que es la imagen de fondo de esta pantalla inicial al tamaño del frame del dispositivo
+        
+        bgImg.frame = view.frame
+        
     }
 
     override func didReceiveMemoryWarning() {
