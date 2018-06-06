@@ -38,20 +38,16 @@ class LeagueVC: UIViewController {
         selectLeague(leagueType: "coed")
     }
     
-    func selectLeague(leagueType: String){
+    func selectLeague(leagueType: String) {
         player.desiredLeague = leagueType
         nextBtn.isEnabled = true
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        //estas lineas de codigo va intentar pasar el segue destination a la variabel skillVC
+        if let skillVC = segue.destination as? SkillVC {
+                skillVC.player = player
+        }
     }
-    */
 
 }
